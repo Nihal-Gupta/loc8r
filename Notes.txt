@@ -1,0 +1,25 @@
+npm install -g express-generator == to insall express for building express project
+express == create express projects
+express --view=pug --git== create express with pug template using 
+npm install == onec package.json created , use this to install dependencies node module
+npm install -g nodemon == use this for automatic restart the server use for dev purpose
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////Advance /////////
+pm2 or foreman--- these project can be used for prd
