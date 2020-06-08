@@ -1,17 +1,17 @@
-const homeList = (req, res) =>{
-    res.render('index', { title: 'Home' });
-}
+const homeList = (req, res) => {
+  res.render('locations-list', { title: 'Home' });
+};
 
-const locationInfo = (req, res) =>{
-    res.render('index', { title: 'Locations Info' });
-}
+const locationInfo = (req, res) => {
+  res.render('location-info', { title: 'Location Info' });
+};
 
-const addReview = (req, res) =>{
-    res.render('index', { title: 'Add Review' });
-}
+const addReview = (req, res) => {
+  res.render('location-review-form', { title: 'Add review' });
+};
 
-module.exports ={
-    homeList,
-    locationInfo,
-    addReview
+module.exports = {
+  homeList,
+  locationInfo,
+  addReview
 };

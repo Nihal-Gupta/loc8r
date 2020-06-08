@@ -1,13 +1,8 @@
-const index = (req, res) => {
-    res.render('index', { title: 'Express' });
-    };
-
-const about=(req,res) =>{
-        res.render('index', { title: 'myExpress' });
-
-    };
+/* GET homepage */
+const about = (req, res) => {
+  res.render('generic-text', { title: 'About' });
+};
 
 module.exports = {
-        about,
-        index
-        };
+  about
+};
