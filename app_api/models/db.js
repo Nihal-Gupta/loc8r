@@ -47,8 +47,7 @@
         callBack();
     })
  };
-
- mongoose.connect(dbURI, options).catch(error =>handleError(error));
+mongoose.connect(dbURI, options).catch(error =>handleError(error));
  mongoose.connection.on('connected', () => {
      console.log(`DB is connected succesfully ${dbURI}`);
  });
