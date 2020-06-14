@@ -10,7 +10,7 @@ router
     .post(contrlLocations.locationsCreate)
 
 router
-    .route('/locations:locationid')
+    .route('/locations/:locationid')
     .get(contrlLocations.locationsReadOne)
     .put(contrlLocations.locationsUpdateOne)
     .delete(contrlLocations.locationsDeleteOne);
