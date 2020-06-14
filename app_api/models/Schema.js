@@ -44,13 +44,14 @@ const locationSchema = new moongoose.Schema({
     },
     facilities:[String],
     coords:{
-        type:String,//error expected try back 
+        type :{type:String },//error expected try back 
         coordinates:[Number]
     },
     openingTimes:[openingTimeSchema],
     reviews: [reviewSchema]
 });
 locationSchema.index({
-    coords:'2dsphere'
+       name : 'text',
+        coords:'2dsphere'
 });
 moongoose.model('Location', locationSchema);// check if Location should be exat the name of JS file or not

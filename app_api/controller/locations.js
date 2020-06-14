@@ -2,8 +2,37 @@ const mongoose =require('mongoose');
 const loc= mongoose.model('Location');
 
 const locationsCreate = (req, res) => { 
-    res.status(200)
-    res.json({"status": "sucess"})
+    loc.create({
+        name: req.body.name,
+        address: req.body.address,
+    facilities: req.body.facilities.split(","),
+    coords: {
+      type: "Point",
+      coordinates: [
+        parseFloat(req.body.lng),
+        parseFloat(req.body.lat)
+       ]
+    },
+    openingTimes: [
+      {
+        days: req.body.days1,
+        opening: req.body.opening1,
+        closing: req.body.closing1,
+        closed: req.body.closed1
+      }
+    ]
+  },
+  (err, location) => {
+    if (err) {
+      res
+        .status(400)
+        .json(err);
+    } else {
+      res
+        .status(201)
+        .json(location);
+    }
+  });
 };
 
 const locationsListByDistance = (req, res) => { 
